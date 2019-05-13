@@ -2,6 +2,11 @@ module.exports = {
   add,
 };
 
-function add(...nums) {
-  return nums.reduce((sum, num) => sum + num, 0);
+function add(nums) {
+  const numbers = Array.isArray(nums)
+    ? nums
+    : [...arguments];
+  return numbers.reduce((sum, num) => {
+    return sum + num
+  }, 0);
 }

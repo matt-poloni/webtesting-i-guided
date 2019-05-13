@@ -23,5 +23,9 @@ describe('calculator.js', () => {
       expect(calculator.add(1,2,3,4,5)).toBe(15);
       expect(calculator.add(1,2,3,4,5,6)).toBe(21);
     })
+
+    it('should handle an array of numbers', () => {
+      expect(calculator.add([1,2,3])).toBe(6);
+    })
   })
 })
